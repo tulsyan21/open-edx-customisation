@@ -1,0 +1,17 @@
+## mako
+<%!
+  from django.utils.translation import ugettext as _
+%>
+<%inherit file="/main.html" />
+
+<%block name="title"><title>${_('Terms of Service')}</title></%block>
+
+<section class="static-container tos">
+<article>
+<table border=0><tr><td>
+<br /> <h3 style="color:#0000ff; font-size:30px;padding:0px 30px">${_('Terms of Service')}</h3>
+<br />
+    <p style="font-family: 'Times New Roman', Times, serif;text-align: justify;line-height: 28px;font-size:20px;padding:0px 30px">At CDAC Noida, we believe in imparting high quality education, promoting long-term retention of knowledge and understanding, both online and in the classroom.</p>
+</td></tr></table></article>
+</section>
+

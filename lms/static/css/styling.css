@@ -1,0 +1,347 @@
+/*styling.css*/
+body{
+    font: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    margin-left: 10%;
+    margin-right: 10%;
+/*    border: 1px solid grey;*/
+    margin: 0 auto;
+}
+
+#header{
+    height: 70px;
+    padding: 5px 0;
+    background: #000066;
+}
+h1 a{
+    font-size: 50px; 
+    font-weight: 100;
+    color: #861BBF;
+    text-decoration: none;
+}
+
+#searchBox{
+    float: right;
+    background: #ffffff;
+    width: 400px;
+    height: auto;
+    
+}
+
+.text{
+    float: left; 
+    width: 200px;
+    padding: 3px 5px;
+    font-size: 10px;
+    color: #E36A0C;
+    background: white url(images/search.png) right center no-repeat;
+    border: 1px solid #C8D03E;
+}
+
+.submit{
+    float: right;
+    padding: 3px 3px 5px 2px;
+    font-weight: bold;
+    color: white;
+    background: #A751D6;
+    font-size: 10px;
+    border: 1px solid #DCD5E1;
+    width: 150px;
+
+}
+
+.clear{
+    clear: both;   
+}
+
+#menu{
+    height: 70px;
+    background: #ffffff;
+    padding: 7px 0;
+}
+ul{
+    list-style: none;   
+}
+
+#menu ul li{
+    float: left;
+    padding: 0 20px;
+    height: 20px;
+    border-right: 1px solid #5d12e7;
+}
+
+#menu ul li:last-child{
+    float: left;
+    height: 20px;
+    margin: auto 10px;
+}
+
+
+
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: white;
+    line-height: 30px;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+#menu ul li a:hover, #menu ul li a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#introduction{
+    background: #ffffff; 
+    padding: 30px;
+    margin: 16px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#introduction h3{
+    font-size: 45px;
+    color: #000066;
+    font-weight: normal;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+#introduction p{
+    font-size: 25px; 
+    color: #000000;
+    text-align: justify;
+    line-height: 50px;
+}
+
+.sidebar{
+    height: 500px;
+    width: 450px;
+    border: 1px solid #BAF46F;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+.sidebar h3{
+    color: #B314DB;
+    font-size: 30px;
+}
+
+.sidebar ul{
+    padding-top: 8px;   
+}
+#leftsidebar ul li{
+    padding: 4px 0 4px 10px;
+    list-style-image: url(images/arrow.png);
+}
+
+#rightsidebar ul li{
+    padding: 17px 0 17px 70px;
+    background: url(images/tick.png) no-repeat left center;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #5d12e7;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active{
+    text-decoration: none;
+    color: #B314DB;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+#leftsidebar{
+    float: left;   
+}
+
+#rightsidebar{
+    float: right;
+}
+
+.footer{
+    height: 100px;
+    background: linear-gradient(#F6F390, #D5D533);
+    background: -webkit-linear-gradient(#F6F390, #D5D533);
+    background: -o-linear-gradient(#F6F390, #D5D533);
+    background: -moz-linear-gradient(#F6F390, #D5D533);
+    padding: 10px 30px;
+    margin-top: 15px;
+}
+#footer_text{
+    float: left;
+}
+#edx_logo{
+    float: right;
+}
+#cdac_logo{
+    float: right;
+    padding:0 30px;
+}
+
+ul, ol {
+    list-style: none
+}
+.main {
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    color: #fff
+}
+.slider {
+    position: relative
+}
+.slider .slider-parent {
+    padding: 0;
+    display: flex
+}
+.slider .slider-parent .images-list {
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.slider .slider-parent .images-list:first-of-type, .slider .slider-parent .images-list:last-of-type {
+    background-image: url("${static.url('images/1.jpg')}")
+}
+.slider .slider-parent .images-list:nth-of-type(2) {
+    background-image: url("${static.url('images/2.jpg')}")
+}
+.slider .slider-parent .images-list:nth-of-type(3) {
+    background-image: url("${static.url('images/3.jpg')}")
+}
+.slider .slider-parent .images-list:nth-of-type(4) {
+    background-image: url("${static.url('images/4.jpg')}")
+}
+.slider .slider-parent .images-list:nth-of-type(5) {
+    background-image: url("${static.url('images/5.jpg')}")
+}
+.slider .buttom-circles {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 10px
+}
+.slider .buttom-circles .buttom-circles-list {
+    display: inline-block
+}
+.slider .buttom-circles .buttom-circles-list:hover .fa:before, .slider .buttom-circles .buttom-circles-list.slider-active .fa:before {
+    content: "\f111";
+}
+.slider > .fa {
+    position: absolute;
+    top: 45%
+}
+.slider > .fa:first-of-type { right: 5px}
+.slider > .fa:last-of-type { left: 5px}
+.slider .fa {
+    text-shadow: 5px 5px 5px #555;
+    cursor: pointer
+}
+ 
+@media(min-width: 100px) and (max-width: 767px) {
+    .slider > .fa { font-size: 25px }
+    .slider .buttom-circles .buttom-circles-list { visibility: hidden }
+}
+@media(min-width: 768px) and (max-width: 991px) { 
+    .slider > .fa { font-size: 50px }
+    .slider .buttom-circles .buttom-circles-list { visibility: hidden }
+}
+@media(min-width: 992px) and (max-width: 1199px) { 
+    .slider > .fa { font-size: 75px }
+    .slider .buttom-circles .buttom-circles-list { font-size: 17px }
+}
+@media(min-width: 1200px) { 
+    .slider > .fa { font-size: 100px }
+    .slider .buttom-circles .buttom-circles-list { font-size: 25px }
+}
+/* Style the tab */
+.tab {
+    
+  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 120px;
+  cursor: pointer;
+  }
+  .tap {
+    
+  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 120px;
+  cursor: pointer;
+  }
+  
+  
+  /* Style the buttons inside the tab */
+   .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;} 
+    .tap button {
+      background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  } 
+  
+  /* Change background color of buttons on hover*/
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  .tap button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: white;
+  }
+  .tap button.active {
+    background-color: white;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 50px 60px;
+    border: 1px solid black;
+    border-top: none;
+  }
+  .image {
+  padding: 40px;
+  border: 1px solid black;
+  }

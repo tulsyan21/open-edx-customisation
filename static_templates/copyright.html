@@ -1,0 +1,31 @@
+## mako
+<%!
+  from django.utils.translation import ugettext as _
+%>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/main.html" />
+
+<%block name="title"><title>${_('Copyright')}</title></%block>
+
+<section class="container copyright" style="width: auto;">
+
+  <section class="vision">
+
+## Copyright Section ##
+    <section class="message left" id="copyright">
+   
+      <article>
+        <h3 style="color:#0000ff;font-size:30px">${_('Copyright')}</h3>
+
+<table border=0>
+<tr><td style="font-family: 'Times New Roman', Times, serif;text-align: justify;line-height: 28px;font-size:20px"><br />Material featured on this Portal may be reproduced free of charge after taking proper permission by sending a mail to us. However, the material has to be reproduced accurately and not to be used in a derogatory manner or in a misleading context.</td></tr>
+</table>
+
+      </article>
+      <hr class="fade-right-hr-divider">
+    </section>
+</section>
+
+</section>
+	

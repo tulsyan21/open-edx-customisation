@@ -1,0 +1,41 @@
+## mako
+<%!
+  from django.utils.translation import ugettext as _
+%>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/main.html" />
+
+<%block name="title"><title>${_('Honor Code')}</title></%block>
+
+<section class="container honor" style="width: auto;">
+
+  <section class="vision">
+
+## Honor Code Section ##
+    <section class="message left" id="honor">
+   
+      <article>
+        <h3 style="color:#0000ff;font-size:30px">${_('Honor Code')}</h2>
+
+<table border=0>
+<tr><td style="font-family: 'Times New Roman', Times, serif;text-align: justify;line-height: 28px;font-size:20px"><br />COCCs depends upon your motivation to learn, and to do so with honesty. In order to participate in COOCs, you must agree to the “Honour Code” below
+<br />By enrolling in a COOC's course, I agree that I will:
+<br /><ul><li>Complete all quizzes, assignments and any of such assessments on my own, unless collaboration is explicitly permitted.</li>
+<li>Maintain only one user account, and not let anyone else use my username and/or password.</li>
+<li>Not engage in any activity that would dishonestly improve my results, or affect the results of others.</li>
+<li>Not post answers to problems that are being used to assess student performance.</li></ul>
+Unless otherwise indicated by the faculty of a COOC's course, learners on COOCs are encouraged to:
+<ul><li>Collaborate with others on the lecture videos, exercises, homework and labs.</li>
+<li>Discuss with others on general concepts and materials in each course.</li>
+<li>Present ideas and written work to fellow COOCs learners or others for comments or criticism.</li></ul>
+</td></tr>
+</table>
+
+        </article>
+      <hr class="fade-right-hr-divider">
+    </section>
+</section>
+
+</section>
+	

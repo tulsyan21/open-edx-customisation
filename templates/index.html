@@ -1,0 +1,408 @@
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Cox-CDAC MOOC Courses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<style>
+body{
+    background-color:gray;
+}
+#container{
+    margin-left: 10%;
+    margin-right: 10%;
+    width:80%;
+    padding:0px 30px;
+    overflow:hidden;
+    background-color:white;
+}
+
+h1 a{
+    font-size: 50px; 
+    font-weight: 100;
+    color: #861BBF;
+    text-decoration: none;
+}
+
+#searchBox{
+    float: right;
+    background: #ffffff;
+    width: 300px;
+    height: auto;
+    
+}
+
+.text{
+    float: left; 
+    width: 150px;
+    padding: 5px 5px 5px 0px;
+    font-size: 10px;
+    color: #E36A0C;
+    background: white url(images/search.png) right center no-repeat;
+    border: 1px solid #C8D03E;
+}
+
+.submit{
+    float: right;
+    padding:5px 5px 0px 2px;
+    font-weight: bold;
+    color: white;
+    background: #A751D6;
+    font-size: 10px;
+    border: 1px solid #DCD5E1;
+    width: 150px;
+}
+
+.clear{
+    clear: both;   
+}
+
+#menu{
+    height: 50px;
+    background: #ffffff;
+    padding: 7px 0;
+}
+ul{
+    list-style: none;   
+}
+
+#menu ul li{
+    float: left;
+    padding: 0 10px;
+    height: 20px;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #000066;
+    line-height: 30px;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+#menu ul li a:hover, #menu ul li a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000066;
+}
+
+#introduction{
+    background: #ffffff; 
+    font-family: "Times New Roman", Times, serif;
+    padding:10px 0px;
+}
+
+#introduction h3{
+    font-size: 35px;
+    color: #000066;
+    font-weight: normal;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+#introduction p{
+    font-size: 25px; 
+    color: #000000;
+    text-align: justify;
+    line-height: 28px;
+}
+ul, ol {
+    list-style: none
+}
+.slider {
+    position: relative;
+}
+.slider .slider-parent {
+    padding: 0;
+    display: flex;
+    
+}
+.slider .slider-parent .images-list {
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.slider .slider-parent .images-list:first-of-type, .slider .slider-parent .images-list:last-of-type {
+    background-image: url("${static.url('images/1.jpg')}");
+}
+.slider .slider-parent .images-list:nth-of-type(2) {
+    background-image: url("${static.url('images/2.jpg')}");
+
+}
+.slider .slider-parent .images-list:nth-of-type(3) {
+    background-image: url("${static.url('images/3.jpg')}");
+
+}
+.slider .slider-parent .images-list:nth-of-type(4) {
+    background-image: url("${static.url('images/4.jpg')}");
+
+}
+.slider .slider-parent .images-list:nth-of-type(5) {
+    background-image: url("${static.url('images/5.jpg')}");
+
+}
+.slider .buttom-circles {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 10px
+}
+
+.slider .buttom-circles .buttom-circles-list {
+    display:inline-block;
+}
+
+.slider .buttom-circles .buttom-circles-list:hover .fa:before, .slider .buttom-circles .buttom-circles-list.slider-active .fa:before {
+    content: "\f111";
+}
+.slider > .fa {
+    position: absolute;
+    top: 45%
+}
+.slider > .fa:first-of-type { right: 5px}
+.slider > .fa:last-of-type { left: 5px}
+.slider .fa {
+    text-shadow: 5px 5px 5px #555;
+    cursor: pointer
+}
+ 
+@media(min-width: 100px) and (max-width: 767px) {
+    .slider > .fa { font-size: 25px }
+    .slider .buttom-circles .buttom-circles-list { visibility: hidden }
+}
+@media(min-width: 768px) and (max-width: 991px) { 
+    .slider > .fa { font-size: 50px }
+    .slider .buttom-circles .buttom-circles-list { visibility: hidden }
+}
+@media(min-width: 992px) and (max-width: 1199px) { 
+    .slider > .fa { font-size: 75px }
+    .slider .buttom-circles .buttom-circles-list { font-size: 17px }
+}
+@media(min-width: 1200px) { 
+    .slider > .fa { font-size: 100px }
+    .slider .buttom-circles .buttom-circles-list { font-size: 25px }
+}
+
+
+/*new tabs styling*/
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+#newtab{
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+#newtab button{
+  background-color: #cfd1cb; !important
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 15px;
+  font-size: 20px;
+  width: 33%;
+  font-weight:100;
+}
+
+#newtab button:hover {
+  background-color: #8d8f89; !important
+}
+
+#newtab button:active {
+  background-color:#f59842;  !important
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+display: none;
+  color: black;
+  display: none;
+  padding: 50px 60px;
+  height: 100%;
+}
+.repo button{
+	background-color:red; !important
+	color:black;
+	font-size:16px;
+	padding-bottom:15px;
+}
+#hclient{
+	color:#e45142;
+}
+
+</style>
+</head>
+<body>	
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="/header/header.html"/>
+<%inherit file="main.html" />
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML
+from django.urls import reverse
+import third_party_auth
+from third_party_auth import provider, pipeline
+
+%>
+
+<section class="home" style="background-color:#f1f1f1;">
+	  <div id="container">
+                <div class="slider" style="padding:0px 0px;">
+                  <ul class="slider-parent" style="margin-top:0px;padding-left:0px;padding-right:0px">
+                    <li class="images-list" data-slider="1"></li>
+                    <li class="images-list" data-slider="2"></li>
+                    <li class="images-list" data-slider="3"></li>
+                    <li class="images-list" data-slider="4"></li>
+                    <li class="images-list" data-slider="5"></li>
+                    <li class="images-list" data-slider="6"></li>
+                  </ul>
+                  <ol class="buttom-circles">
+                    <li class="buttom-circles-list slider-active" data-slider="1"><i class="fa fa-circle-thin"></i></li>
+                    <li class="buttom-circles-list" data-slider="2"><i class="fa fa-circle-thin"></i></li>
+                    <li class="buttom-circles-list" data-slider="3"><i class="fa fa-circle-thin"></i></li>
+                    <li class="buttom-circles-list" data-slider="4"><i class="fa fa-circle-thin"></i></li>
+                    <li class="buttom-circles-list" data-slider="5"><i class="fa fa-circle-thin"></i></li>
+                    <li class="buttom-circles-list" data-slider="6"></li>
+                  </ol>
+                  <i class="fa fa-chevron-right fa-5x"></i>
+                  <i class="fa fa-chevron-left fa-5x"></i>
+                </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script src ="${static.url('js/function.js')} " type="text/javascript"></script>
+
+           <div id="introduction">
+                <h3>C-DAC Online Cerificate Courses(COCCs):</h3>
+                <p>COCCs are delivered online and accessible to all.Open stands for anyone can enroll into these courses.Online stands for its delivery is made via the internet.These unique courses has been designed and developed with high goal to teach a specific subject. COCCs typically comprise video lessons, readings, assessments, and discussion forums. The course content are very interactive and enagaging to user's perspective.The courses are associated with a final assessment, which each user has to qualify to get certificate.</p>
+            </div>
+        <div id="newtab">
+			<button class="tablink" onclick="openPage('Home', this, '#f5bc42')">e-Repository</button>
+<button class="tablink" onclick="openPage('News', this, '#42f5c2')">Upcoming e-courses</button>
+<button class="tablink" onclick="openPage('Contact', this, '#bffa3e')">Current e-courses</button>
+	
+<div id="Home" class="tabcontent">
+  <h3 style="font-size:25px"><b>e-Repository</b></h3><br />
+  <p>Browse our courses from previous repositories</p> <br />
+	<br />
+  <button class="repo" onclick="window.open('https://www.elearn-mhrd.in/')" style="padding:10px;font-size:16px;font-style:'Times New Roman',sans,serif;">Specialized Course in IT</button>
+  <br />      	<button class="repo" onclick="window.open('http://elearn-esecurity.in/')" style="padding:10px;font-size:16px;font-style:'Times New Roman',sans,serif;">E-Security Course</button>
+  <br />              <button class="repo" onclick="window.open('http://nidmssp.in/')" style="padding:10px;font-size:16px;font-style:'Times New Roman',sans,serif;">Disaster Management</button>
+  <br />      	<button class="repo" onclick="window.open('')" style="padding:10px;font-size:16px;font-style:'Times New Roman',sans,serif;">E-Course in Health</button>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3 style="font-size:25px"><b>Upcoming e-courses</b></h3><br />
+  <p>Gear up some of the exiting upcoming courses</p> 
+	<%include file="${courses_list}" />
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3 style="font-size:25px"><b>Current e-courses</b></h3><br />
+  <p>Get in touch, and enroll now to our current e-courses</p>
+	<%include file="${courses_list}" />
+</div>
+		</div>
+	     <h3 style="color: #000066;float:left;font-size:25px"><b>Clientele</b></h3>
+<marquee><span id="hclient"><b>Current Clients:</b></span> National Informatics Centre(NIC),National Institute of Criminology and Forensic Science(NICFS),International Centre for Information Systems and Audit (iCISA) <span id="hclient"><b>Previous Clients:</b></span> National Institute of Disaster Management(NIDM), All India Institute of Medical Sciences(AIIMS), Election Commission of India(ECI), North Eastern Indira Gandhi Regional Institute of Health & Medical Sciences (NEIGRIHMS), Regional Institute of Medical Sciences(RIMS), NIT Manipur, NIT Silchar, Uttarakhand Police</marquee>		
+	 
+
+        </div>   </div>
+</div>
+
+<script>
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openbutton(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("subbutton");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "inline-block";
+  evt.currentTarget.className += " active";
+}
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click();
+</script>
+
+            <div class="clear"></div>
+        </div> 
+
+      % if show_homepage_promo_video:
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <div class="play-intro"></div>
+          </div>
+        </a>
+      % endif
+
+  
+  
+
+</section>
+
+<section id="video-modal" class="modal home-page-video-modal video-modal">
+  <div class="inner-wrapper">
+    <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif
+</body>
+</html>
